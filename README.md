@@ -1,69 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+***SPLASH***
+-Header[ nav,  ]
+-Body [ desc, logo
+    ( login / sign up bar ) ]
+-Footer [ credits, contact, about ]
 
-## Available Scripts
+***SEARCH***
+-Header []
+-Body [ (desc, Logo ) ( api switch, search for API, build tree chart, set / change node / save tree ) ( search articles / save articles / ... ) ( compile project articles and proceed to analyser ) ]
+-Footer []
 
-In the project directory, you can run:
+You will be able to search for articles, save articles, concatenate saved articles, and analyse the text.
 
-### `npm start`
+all items may be saved in the project, local storage for sure, think about how to use cloud.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+APIs:(
+    doaj.org
+    legal?
+    Focused scientific?
+    News?
+    P.D. literature?
+)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Non targeted:(   
+   Graphemes, count, variety [bar plot]
+   Morphemes, count, variety [bar plot]
+)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-#polymath
+Targeted:(
+	Grapheme target : {
+		count occurence: integer
+		list parent morphemes: array of strings [bar plot, occurence vs name]
+		list parent sentences: array of strings [bar plot, occurence vs name; word tree]
+	}
+	Morpheme target : {
+		count occurence, list ocurrences: integer, string list [bar plot, occurence vs variety]
+		count pre-/-suff -ixed occurences: string [bar plot, occurence vs variety]
+		list parent sentences: array of strings [bar plot, occurence vs variety; tree plot]
+	}
+	Clause target: {
+		ocurrences: integer, sentences: string array [tree plot]
+}
+	Sentence target: {
+		ocurrences: integer
+}
+)
